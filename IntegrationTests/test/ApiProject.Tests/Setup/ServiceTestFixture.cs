@@ -9,7 +9,13 @@ namespace ApiProject.Tests.Setup
     {
         protected override void ConfigureServices(WebHostBuilderContext hostingContext, IServiceCollection services)
         {
-            services.AddTransient<IValuesBusinessLogic, FakeValuesBusinessLogic>();
+            Bootstrap.Container.Options.AllowOverridingRegistrations = true;
+        }
+
+        protected override void ConfigureTestServices(IServiceCollection services)
+        {
+            Bootstrap.Container.Register<IValuesBusinessLogic, FakeValuesBusinessLogic>();
+
         }
     }
 }

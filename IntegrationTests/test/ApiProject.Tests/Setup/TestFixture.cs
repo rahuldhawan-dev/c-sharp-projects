@@ -25,6 +25,7 @@ namespace ApiProject.Tests.Setup
             // WebHostBuilder always calls Startup.cs's configuration methods *last*,
             // So to replace the dependencies in there, we have to get fancy.
             // See: https://github.com/aspnet/Hosting/issues/905
+            // Don't need this anymore. Can use ConfigureTestServices to override dependencies
 
             var builder = new WebHostBuilder()
                 .UseConfiguration(UseConfiguration(environment))
@@ -54,6 +55,7 @@ namespace ApiProject.Tests.Setup
                     // ReSharper disable once ConvertClosureToMethodGroup
                     ConfigureLogging(context, loggingBuilder);
                 })
+                .ConfigureTestServices(ConfigureTestServices)
                 .UseEnvironment(environment)
                 .UseStartup(typeof(T));
 
@@ -104,6 +106,8 @@ namespace ApiProject.Tests.Setup
             config.AddEnvironmentVariables();
             return config.Build();
         }
+
+        protected virtual void ConfigureTestServices(IServiceCollection services) { }
 
         protected virtual void ConfigureServices(WebHostBuilderContext context, IServiceCollection services) { }
 
