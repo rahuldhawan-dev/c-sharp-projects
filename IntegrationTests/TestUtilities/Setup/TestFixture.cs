@@ -102,8 +102,8 @@ namespace ApiProject.Tests.Setup
         protected virtual IConfiguration BuildConfiguration(string environment)
         {
             var config = new ConfigurationBuilder();
-            config.AddJsonFile($"appsettings.{environment}.json", true, true);
-            config.AddEnvironmentVariables();
+            //config.AddJsonFile($"appsettings.{environment}.json", true, true);
+            //config.AddEnvironmentVariables();
             return config.Build();
         }
 
@@ -113,8 +113,8 @@ namespace ApiProject.Tests.Setup
 
         protected virtual void ConfigureLogging(WebHostBuilderContext hostingContext, ILoggingBuilder logging)
         {
-            logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
-            logging.AddConsole();
+            //logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+            //logging.AddConsole();
         }
 
         protected virtual void ConfigureAppConfiguration(WebHostBuilderContext hostingContext, IConfigurationBuilder config) { }

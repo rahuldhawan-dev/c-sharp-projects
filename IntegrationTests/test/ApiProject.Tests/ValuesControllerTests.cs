@@ -31,5 +31,19 @@ namespace ApiProject.Tests
             Assert.AreEqual("testvalue1", result.FirstOrDefault());
             Assert.AreEqual("testvalue2", result.LastOrDefault());
         }
+
+        [Test]
+        public async Task TestGet2()
+        {
+            var response = await _fixture.Client.GetAsync($"/api/values");
+
+            var json = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<IEnumerable<string>>(json);
+
+            Assert.NotNull(response);
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Assert.AreEqual("testvalue1", result.FirstOrDefault());
+            Assert.AreEqual("testvalue2", result.LastOrDefault());
+        }
     }
 }

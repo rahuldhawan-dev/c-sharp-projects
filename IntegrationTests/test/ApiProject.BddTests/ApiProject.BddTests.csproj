@@ -11,12 +11,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Features\GetSingleValue.feature.cs" />
+    <Compile Remove="Features\Value.feature.cs" />
+    <Compile Remove="Steps\ValuesSteps.cs" />
+    <Compile Remove="Steps\ValueSteps.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Remove="Features\Value.feature" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\GetValues - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Values - Copy.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.1.1" />
     <PackageReference Include="nunit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.0.225" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.0.225" />
   </ItemGroup>
 
   <ItemGroup>

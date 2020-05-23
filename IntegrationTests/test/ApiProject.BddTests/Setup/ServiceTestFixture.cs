@@ -1,5 +1,6 @@
 ﻿using ApiProject.BusinessLogic;
 using ApiProject.Tests.Fakes;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ApiProject.Tests.Setup
@@ -10,6 +11,7 @@ namespace ApiProject.Tests.Setup
         {
             Bootstrap.Container.Options.AllowOverridingRegistrations = true;
             Bootstrap.Container.Register<IValuesBusinessLogic, FakeValuesBusinessLogic>();
+
         }
     }
 }

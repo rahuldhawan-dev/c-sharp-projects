@@ -27,7 +27,7 @@ namespace ApiProject.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return "value";
+            return _logic.Get(id);
         }
 
         // POST api/values

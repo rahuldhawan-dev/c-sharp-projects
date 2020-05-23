@@ -8,10 +8,16 @@ namespace ApiProject.BusinessLogic
         {
             return new string[] { "value1", "value2" };
         }
+
+        public string Get(int id)
+        {
+            return $"value{id}";
+        }
     }
 
     public interface IValuesBusinessLogic
     {
         IEnumerable<string> Get();
+        string Get(int id);
     }
 }

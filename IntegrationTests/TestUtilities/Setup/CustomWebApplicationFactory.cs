@@ -15,7 +15,7 @@ namespace ApiProject.Tests.Setup
             {
                 // Create a new service provider.
                 var serviceProvider = new ServiceCollection()
-                    .AddEntityFrameworkInMemoryDatabase()
+                    //.AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
                 //// Add a database context (ApplicationDbContext) using an in-memory 

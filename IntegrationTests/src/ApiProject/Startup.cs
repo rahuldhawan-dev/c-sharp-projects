@@ -14,6 +14,8 @@ namespace ApiProject
 {
     public class Startup
     {
+        //protected Container Container { get; private set; } = new Container();
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,6 +28,8 @@ namespace ApiProject
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 			
+            Bootstrap.Container = new Container();
+            
             IntegrateSimpleInjector(services);
 
             RegisterSimpleInjectorDependencies(Bootstrap.Container);
