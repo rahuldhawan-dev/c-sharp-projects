@@ -11,6 +11,7 @@ namespace ApiProject.BddTests.Setup
         {
             Bootstrap.Container.Options.AllowOverridingRegistrations = true;
             Bootstrap.Container.Register<IValuesBusinessLogic, FakeValuesBusinessLogic>();
+            Bootstrap.Container.Register<ICalculatorBusinessLogic, FakeCalculatorBusinessLogic>();
 
         }
     }

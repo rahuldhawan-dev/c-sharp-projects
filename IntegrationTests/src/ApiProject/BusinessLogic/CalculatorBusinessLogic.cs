@@ -1,4 +1,6 @@
-﻿namespace ApiProject.BusinessLogic
+﻿using System;
+
+namespace ApiProject.BusinessLogic
 {
     public interface ICalculatorBusinessLogic
     {
@@ -9,7 +11,8 @@
     {
         public int Sum(int a, int b)
         {
-            return a + b;
+            throw new NotImplementedException();
+            //return a + b;
         }
     }
 }

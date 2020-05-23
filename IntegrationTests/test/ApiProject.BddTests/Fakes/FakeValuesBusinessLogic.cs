@@ -15,4 +15,12 @@ namespace ApiProject.BddTests.Fakes
             return $"testvalue{id}";
         }
     }
+
+    public class FakeCalculatorBusinessLogic : ICalculatorBusinessLogic
+    {
+        public int Sum(int a, int b)
+        {
+            return a + b;
+        }
+    }
 }

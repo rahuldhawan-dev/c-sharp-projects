@@ -39,6 +39,7 @@ namespace ApiProject
         {
             container.Register<IValuesBusinessLogic, ValuesBusinessLogic>();
             container.Register<ValuesController>();
+            container.Register<CalculatorController>();
         }
 
         /// <summary>
