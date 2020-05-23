@@ -1,14 +1,9 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using SimpleInjector;
-using SimpleInjector.Lifestyles;
-using System;
-using System.Diagnostics;
-using System.Collections.Generic;
+﻿using System;
 using System.Threading;
-using ApiProject.Tests.Setup;
+using Microsoft.AspNetCore.Hosting;
 using TechTalk.SpecFlow;
 
-namespace Soti.Cloud.Workflow.Tests
+namespace ApiProject.BddTests
 {
 	[Binding]
 	public sealed class Hooks

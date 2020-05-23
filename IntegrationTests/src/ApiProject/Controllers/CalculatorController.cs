@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ApiProject.BusinessLogic;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ApiProject.Controllers
 {

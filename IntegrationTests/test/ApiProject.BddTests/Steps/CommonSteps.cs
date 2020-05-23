@@ -1,7 +1,7 @@
-﻿using ApiProject.Tests.Setup;
+﻿using ApiProject.BddTests.Setup;
 using TechTalk.SpecFlow;
 
-namespace Soti.Cloud.Workflow.Tests.Steps
+namespace ApiProject.BddTests.Steps
 {
 
     [Binding]

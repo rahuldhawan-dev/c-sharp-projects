@@ -1,4 +1,4 @@
-﻿namespace ApiProject.Controllers
+﻿namespace ApiProject.BusinessLogic
 {
     public interface ICalculatorBusinessLogic
     {

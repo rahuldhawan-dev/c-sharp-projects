@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace ApiProject.Tests.Setup
+namespace TestUtilities.Setup
 {
     public class TestFixture<T> : IDisposable
     {

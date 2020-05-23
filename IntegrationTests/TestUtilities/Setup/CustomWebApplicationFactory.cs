@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace ApiProject.Tests.Setup
+namespace TestUtilities.Setup
 {
     #region snippet1
     public class CustomWebApplicationFactory<TStartup> 

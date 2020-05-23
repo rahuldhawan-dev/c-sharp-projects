@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using ApiProject.BusinessLogic;
 
-namespace ApiProject.Tests.Fakes
+namespace ApiProject.BddTests.Fakes
 {
     public class FakeValuesBusinessLogic : IValuesBusinessLogic
     {

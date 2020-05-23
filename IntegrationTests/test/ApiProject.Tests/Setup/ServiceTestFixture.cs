@@ -1,6 +1,7 @@
 ﻿using ApiProject.BusinessLogic;
 using ApiProject.Tests.Fakes;
 using Microsoft.Extensions.DependencyInjection;
+using TestUtilities.Setup;
 
 namespace ApiProject.Tests.Setup
 {

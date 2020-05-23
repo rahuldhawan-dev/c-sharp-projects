@@ -1,9 +1,9 @@
-﻿using ApiProject.BusinessLogic;
-using ApiProject.Tests.Fakes;
-using Microsoft.AspNetCore.Hosting;
+﻿using ApiProject.BddTests.Fakes;
+using ApiProject.BusinessLogic;
 using Microsoft.Extensions.DependencyInjection;
+using TestUtilities.Setup;
 
-namespace ApiProject.Tests.Setup
+namespace ApiProject.BddTests.Setup
 {
     public class ServiceTestFixture : TestFixture<Startup>
     {

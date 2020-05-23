@@ -1,7 +1,6 @@
-﻿using NUnit.Framework;
-using TechTalk.SpecFlow;
+﻿using TechTalk.SpecFlow;
 
-namespace Soti.Cloud.Workflow.Tests.Steps
+namespace ApiProject.BddTests.Steps
 {
     [Binding]
     public class GetVaulesSteps: CommonSteps

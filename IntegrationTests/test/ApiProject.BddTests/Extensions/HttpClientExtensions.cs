@@ -3,7 +3,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace ApiProject.Tests.Extensions
+namespace ApiProject.BddTests.Extensions
 {
     public class TestHttpResponseMessage<T>
     {
