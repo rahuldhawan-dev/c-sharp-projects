@@ -5,16 +5,16 @@ namespace ApiProject.BddTests.Steps
 {
 
     [Binding]
-    public sealed class LoginSteps : CommonSteps
+    public sealed class TestServerSteps : CommonSteps
     {
-        public LoginSteps(Context context) : base(context)
+        public TestServerSteps(Context context) : base(context)
         {
         }
 
         [Given(@"test server is setup")]
         public void GivenTestServerIsSetup()
         {
-            Context.ApiProjectTestFixture = new ApiProjectTestFixture();
+            Context.ApiProjectTestFixture = StaticHosts.ApiProjectTestFixture;
         }
 
     }
@@ -31,18 +31,16 @@ namespace ApiProject.BddTests.Steps
         public CommonSteps(Context context)
         {
             Context = context;
-            //if (context.m_aliases == null)
-            //    Context.m_aliases = new Dictionary<string, string>();
-            //ConfigProvider = Bootstrap.Container.GetInstance<IConfigProvider>();
-            //WorkflowDataProvider = Bootstrap.Container.GetInstance<IWorkflowDataProvider>();
         }
-
     }
 
     public class Context
     {
-        //public ValuesTestFixture ValuesTestFixture { get; set; }
-
         public ApiProjectTestFixture ApiProjectTestFixture { get; set; }
+    }
+
+    public static class StaticHosts
+    {
+        public static ApiProjectTestFixture ApiProjectTestFixture { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using BoDi;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
@@ -13,9 +14,11 @@ namespace ApiProject.BddTests.Steps
     {
         private readonly Context _context;
 
-        public GetVaulesSteps(Context context) : base(context)
+        public GetVaulesSteps(ITest test) : base(null)
         {
-            _context = context;
+            var id = test.Id;
+            //var id = container.Resolve<ITest>().Id;
+            //_context = context;
         }
 
         [Given(@"nothing")]

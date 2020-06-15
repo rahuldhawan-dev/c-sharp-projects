@@ -13,3 +13,11 @@ Scenario: Add two numbers
 	And I have entered 70 into the calculator as b
 	When I press add
 	Then the result should be 120 on the screen
+
+	
+@mytag
+Scenario: Add two more numbers
+	Given I have entered 100 into the calculator as a
+	And I have entered 200 into the calculator as b
+	When I press add
+	Then the result should be 300 on the screen
